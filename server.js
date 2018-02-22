@@ -50,7 +50,7 @@ module.exports = app;
 const server = http.createServer(app)
 // Listen
 
-const port = 26116
+const port = 80
 console.log(`starting monitoring server on ${port}...`)
 server.listen(port)
 
