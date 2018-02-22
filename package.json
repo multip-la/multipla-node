@@ -1,0 +1,35 @@
+{
+  "name": "multipla-node",
+  "version": "1.0.0",
+  "description": "Multipla webpage",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bluebird": "latest",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
+    "express": "latest",
+    "gulp": "^3.9.1",
+    "jwt-simple": "^0.5.1",
+    "lodash": "latest",
+    "moment": "^2.18.1",
+    "morgan": "^1.8.2",
+    "websocket": "^1.0.24"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/multip-la/multipla-node.git"
+  },
+  "keywords": [
+    "dashboard"
+  ],
+  "author": "Chinwo, Anthony (anthony.chinwo@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/multip-la/multipla-node/issues"
+  },
+  "homepage": "https://github.com/multip-la/multipla-node#readme"
+}
