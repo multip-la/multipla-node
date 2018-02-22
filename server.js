@@ -50,9 +50,9 @@ module.exports = app;
 const server = http.createServer(app)
 // Listen
 
-const port = 80
-console.log(`starting monitoring server on ${port}...`)
-server.listen(port)
+const PORT = process.env.PORT || 5000
+console.log(`starting monitoring server on ${PORT}...`)
+server.listen(PORT)
 
 const wsServer = new WebSocketServer({httpServer: server, autoAcceptConnections: false});
 
