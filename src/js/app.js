@@ -115,10 +115,15 @@ class Multipla extends EventEmitter3 {
     }
     
     connectToServer() {
-        this.server = this.connect('ws://localhost:26116', {connected:'server_connected', disconnected: 'server_disconnected', retryCount: 'server'})
+        let url = `${location.protocol === 'https://' ? 'wss://' : 'ws://'}${location.host}`
+        this.server = this.connect(url, {connected:'server_connected', disconnected: 'server_disconnected', retryCount: 'server'})
     }
     
     connectToApi() {
+        if(location.hostname !== 'localhost:9000'){
+            console.log('[connectToApi] API server hasnt been deployed, aborting...')
+            return
+        }
         this.api = this.connect('ws://localhost:9000', {connected:'api_connected', disconnected: 'api_disconnected', retryCount: 'api'})
     }
     
